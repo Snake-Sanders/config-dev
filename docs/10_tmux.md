@@ -26,13 +26,20 @@ https://www.youtube.com/watch?v=-B5VDp50daI&list=PLsz00TDipIfct4F3pHv6_uI9OyjphQ
 
 - Reload configuration [leader] + r
 - Install pluggins [leader] + I
-- Creat new pane vertical [leader] + c
+- Create a new pane vertical [leader] + c
 - Split pane vertical [leader] + %
 - Split pane horizontal [leader] + "
-- Run commad [leader] + : + command
+- Run commad [leader] + : + command (press TAB to get options)
 - deattach from session [leader] + d
-  reatach with `tmux attach
+- close pane session [leader] + x
+- change window with [leader] + p (previous)
+- change window with [leader] + n (next)
+- change window with [leader] + 1 (number)
 
 To list the session, exit and run
-tmux list-sessions
-tmux ls
+`tmux list-sessions`
+or
+`tmux ls`
+
+to reattach to the session:
+`tmux attach`
