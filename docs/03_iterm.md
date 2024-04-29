@@ -14,9 +14,9 @@ https://www.youtube.com/watch?v=wNQpDWLs4To
 
 2. color scheme
 
-- go to `https://iterm2colorschemes.com/`
+- go to https://iterm2colorschemes.com/
 - search for `Gruvbox Dark`
-- download the style file
+- download the style file, save it as `.itermcolors`
 - go to iTerm2, open settings/profiles/colors tab
 - import the theme file
 - make sure the style is selected.
