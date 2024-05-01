@@ -64,6 +64,10 @@ notice how this checks out the repo directly under `Oh my zsh` themes directory:
 - source the file with `source ~/.zshrc`
 - setup this plug with the wizard that shows up automatically. If this does not start, check out the home page on how use the command to lauch.
 
+If you want to reconfigure the style, just run assistant again:
+
+`p10k configure`
+
 6. ZSH syntax highlight
 
 https://github.com/zsh-users/zsh-syntax-highlighting
@@ -84,7 +88,7 @@ Activate the plugin in ~/.zshrc:
 
 Restart zsh (such as by opening a new instance of your terminal emulator).
 
-7. Auto suggestions
+7. ZSH Auto suggestions
 
 https://github.com/zsh-users/zsh-autosuggestions
 
@@ -96,12 +100,32 @@ Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
 
     plugins=(
         # other plugins...
+        zsh-syntax-highlighting
         zsh-autosuggestions
     )
 
 Start a new terminal session.
 
-8. fix Terminal font
+8. ZSH Web-search
+
+This plug allows you to search directly from the console.
+
+example:
+
+`brs weather in Umeo`
+`google trailes 2024`
+
+Just add the plug `web-search` to the pluggins list in `~.zshrc`
+
+```
+  plugins=(
+      zsh-autosuggestions
+      zsh-syntax-highlighting
+      web-search
+  )
+```
+
+9. fix Terminal font
 
 If after these steps you open termianl (/bin/zsh) and the prompt has strange characters, then go to Terminal settings change the font to `JetBrainMonoNL NFM Regular 14`
 
