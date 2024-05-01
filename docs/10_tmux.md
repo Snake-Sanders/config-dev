@@ -18,7 +18,12 @@ add plugs
 
 Theme
 
-https://github.com/catppuccin/tmux
+
+just add the plug with the following line 
+
+`set -g @plugin 'catppuccin/tmux'`
+
+and paste the settings for `Config 3` example
 
 ## Usage
 
