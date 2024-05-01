@@ -43,13 +43,15 @@ option 2:
 
 5. Power Level 10k
 
-This is to change the console style. I installed with homebrew
+Power Level 10k changes the console style. Go to:
 
 https://github.com/romkatv/powerlevel10k
 
-The installation with brew does not work, it cant find the installed package in the path, so I install it directly from source.
+Note: The installation with `brew` **does not work**, it can't find the installed package in the path.
 
-notice how I checkout the directly under Oh my zsh directory:
+I install it directly from source.
+
+notice how this checks out the repo directly under `Oh my zsh` themes directory:
 
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
@@ -68,9 +70,13 @@ https://github.com/zsh-users/zsh-syntax-highlighting
 
 check the specific installation section for `Oh-my-zsh`
 
-Clone this repository in oh-my-zsh's plugins directory:
+- Install the package:
 
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+`brew install zsh-syntax-highlighting`
+
+- Enable `zsh-syntax-highlighting` by sourcing the script. Running this command on the terminal will add the source line to the end of your `.zshrc`:
+
+  echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 Activate the plugin in ~/.zshrc:
 
@@ -78,7 +84,7 @@ Activate the plugin in ~/.zshrc:
 
 Restart zsh (such as by opening a new instance of your terminal emulator).
 
-7. Auto suggertions
+7. Auto suggestions
 
 https://github.com/zsh-users/zsh-autosuggestions
 
