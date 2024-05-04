@@ -36,3 +36,9 @@ Switch to it colorsheme gruvbox-material.
  4. treesitter (creates AST abstract syntax tree for highlight)
  5. nvim neo tree (tree navigation)
     - `Neotree filesystem reveal right`
+
+## Tutorial
+
+start `nvim` and type `:help` to beging the introduction
+
+if the help page show a treesitter highlight error while scrolling the page, then install the highliter for this file `:TSUpdate vimdoc`
