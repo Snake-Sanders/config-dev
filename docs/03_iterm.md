@@ -41,6 +41,8 @@ option 2:
 - open iTerm2 settings/profiles/text tab and in `Font` field
   select the new font.
 
+- under `settings/general/selection` select `Applications in terminal may access clipboard`. This is for copying text in Tmux.
+
 5. Power Level 10k
 
 Power Level 10k changes the console style. Go to:
