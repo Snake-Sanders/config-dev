@@ -22,6 +22,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+
       -- setup for Lua
       lspconfig.lua_ls.setup({
         settings = {
@@ -32,6 +33,7 @@ return {
           },
         },
       })
+      
       -- `on_attach` callback will be called after a language server
       -- instance has been attached to an open buffer with matching filetype
       -- here we're setting key mappings for hover documentation, goto definitions, goto references, etc
@@ -53,10 +55,14 @@ return {
         vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
       end
 
+      -- TODO: install sytax auto completion
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
       -- setup for Elixir
       lspconfig.elixirls.setup({
         cmd = {"/Users/mac/src/github/elixir-ls/release/language_server.sh"},
-        on_attach = on_attach
+        on_attach = on_attach,
+        capabilities = capabilities
       })
 
       -- for help call :h vim.lsp.buf
