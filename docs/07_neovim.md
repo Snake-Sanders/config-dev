@@ -37,6 +37,25 @@ Switch to it colorsheme gruvbox-material.
  5. nvim neo tree (tree navigation)
     - `Neotree filesystem reveal right`
 
+## Elixir Lsp
+
+ref: https://github.com/elixir-lsp/elixir-ls#building-and-running
+
+First, clone the repor under `~/src/github/` 
+
+    git clone https://github.com/elixir-lsp/elixir-ls.git ~/src/github/
+    cd elixir-ls
+    mix deps.get
+    MIX_ENV=prod mix compile
+    mkdir release
+    MIX_ENV=prod mix elixir_ls.release2 -o <release_dir>
+
+    now this is your lsp service directory 
+
+    `~/src/github/elixir-ls/release`
+
+    then, configure the nvim plug `lsp-config.lua`
+
 ## Tutorial
 
 start `nvim` and type `:help` to beging the introduction
