@@ -7,13 +7,13 @@ Definition of Leader Key: [leader]
 
 ## Configuration
 
-Create a a file `~/.tmux.conf` to customize and define keybindings
+Create a a file `~/.config/tmux/tmux.conf` to customize and define keybindings
 load the configuration with:
 
 - [leader] + I to install the plugs set in the config
 - [leader] + r to reload configuration
 - [leader] + : to manualy load config by adding the commad mode
-  and by adding `source-file ~/.tmux.conf`
+  and by adding `source-file <CONFIG_FILE_PATH>`
 
 ## Basics
 

@@ -8,18 +8,19 @@ https://www.youtube.com/watch?v=jaI3Hcw-ZaA&list=RDCMUCo71RUe6DX4w-Vd47rFLXPg&in
 
 ## Configuration
 
-create a file unser `~/.tmux.conf`
+create a file unser `~/.config/tmux/tmux.conf`
+
+### Plug manager
 
 Add TMU the plug manager
 
 `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
-add plugs
+now it is time to add plugs
 
-Theme
+## Color Theme
 
-
-just add the plug with the following line 
+just add the plug with the following line
 
 `set -g @plugin 'catppuccin/tmux'`
 
