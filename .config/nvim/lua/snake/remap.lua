@@ -5,6 +5,13 @@ vim.g.mapleader = " "
 -- space + pv -> shows previows view, which is file Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Navigate vim panes
+-- (hold ctrl and navigate NeoVim windows using the kjhl) 
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+
 -- ctr + p = search files
 --vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 -- space + f + g = find in files with grep 
