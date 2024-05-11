@@ -26,6 +26,38 @@ just add the plug with the following line
 
 and paste the settings for `Config 3` example
 
+## NeoVim integration
+
+Check tmux nvim navigator plug
+
+## Tmux resurrect
+
+saves you sessions and can be restored after system restart
+
+add to you `tmux.conf`:
+
+`set -g @plugin 'tmux-plugins/tmux-resurrect'`
+
+Key bindings:
+
+- prefix + Ctrl-s - save
+- prefix + Ctrl-r - restore
+
+** note r clashes with reload r **
+
+ref: https://github.com/tmux-plugins/tmux-resurrect
+## Tmuxifier 
+
+(package not used at the moment)
+
+allows creating sessions templates
+
+https://github.com/jimeh/tmuxifier
+
+`git clone git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+
+
+
 ## Usage
 
 https://www.youtube.com/watch?v=-B5VDp50daI&list=PLsz00TDipIfct4F3pHv6_uI9OyjphQEGZ&index=4
