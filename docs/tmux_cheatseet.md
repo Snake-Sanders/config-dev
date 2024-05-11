@@ -18,6 +18,8 @@ load the configuration with:
 ## Basics
 
 - [leader] + x exits a pane
+- [leader] + t shows clock
+- [leader] + ? lists shorcuts
 - [leader] + d d://github.com/catppuccin/tmux
 - [leader] + c to create a new pane vertical
 - [leader] + % to split pane vertical
@@ -29,12 +31,45 @@ load the configuration with:
 - change window with [leader] + n (next)
 - change window with [leader] + 1 (number)
 
-tach session
+## Sessions
 
-- [leader] + % split the window in a vertical pane
-- [leader] + " split the window in a horizontal pane
-- [leader] + z zooms in/out the current pane full screen
-- [leader] + s to list the open sessions, windows and panes
+_Prefix commands with [leader]_
+
+    :new<CR>  new session
+    s  list sessions
+    $  name session
+
+`tmux kill-session -t myname`
+
+## Windows (tabs)
+
+_Prefix commands with [leader]_
+
+    c create window
+    w list windows
+    n next window
+    p previous window
+    f find window
+    , name window
+    & kill window
+
+## Panes split
+
+_Prefix commands with [leader]_
+
+    % vertical split
+    " horizontal split
+
+    o  swap panes
+    q  show pane numbers
+    x  kill pane
+    +  break pane into window (e.g. to select text by mouse to copy)
+    -  restore pane from window
+       space - toggle between layouts
+
+    { moves the current pane left
+    } moves the current pane right
+    z toggle pane zoom
 
 leader + arrows to move among panes
 
@@ -75,16 +110,36 @@ Excerpts from the [man page][1]:
 
     Function                     vi              emacs
     --------                     --              -----
+    Back to indentation          ^               M-m
+    Clear selection              Escape          C-g
+    Copy selection               Enter           M-w
+    Cursor down                  j               Down
+    Cursor left                  h               Left
+    Cursor right                 l               Right
+    Cursor to bottom line        L
+    Cursor to middle line        M               M-r
+    Cursor to top line           H               M-R
+    Cursor up                    k               Up
+    Delete entire line           d               C-u
+    Delete to end of line        D               C-k
+    End of line                  $               C-e
+    Goto line                    :               g
     Half page down               C-d             M-Down
     Half page up                 C-u             M-Up
     Next page                    C-f             Page down
+    Next word                    w               M-f
+    Paste buffer                 p               C-y
     Previous page                C-b             Page up
-    Scroll down                  C-Down or C-e   C-Down
-    Scroll up                    C-Up or C-y     C-Up
+    Previous word                b               M-b
+    Quit mode                    q               Escape
+    Scroll down                  C-Down or J     C-Down
+    Scroll up                    C-Up or K       C-Up
     Search again                 n               n
-    Search again in reverse      N               N
     Search backward              ?               C-r
     Search forward               /               C-s
+    Start of line                0               C-a
+    Start selection              Space           C-Space
+    Transpose chars                              C-t
 
 Plus a bunch more. Note that you have to press `C-b` twice if you use that for page up since `C-b` is bound as the command key. See the man page for information on prefacing a copy mode command with a repeat count.
 
