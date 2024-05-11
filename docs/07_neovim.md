@@ -37,6 +37,8 @@ Switch to it colorsheme gruvbox-material.
  5. nvim neo tree (tree navigation)
     - `Neotree filesystem reveal right`
 
+ for more plugs check: https://github.com/rockerBOO/awesome-neovim
+ 
 ## Elixir Lsp
 
 ref: https://github.com/elixir-lsp/elixir-ls#building-and-running
