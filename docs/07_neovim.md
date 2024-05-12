@@ -1,4 +1,3 @@
-
 # sources
 
 ## The primeagen (youtube)
@@ -15,7 +14,7 @@ https://www.youtube.com/watch?v=4zyZ3sw_ulc&list=PLsz00TDipIffreIaUNk64KxTIkQaGg
 
 - create the configuration file for neovim
 
-    ~/.config/nvim/init.lua
+  ~/.config/nvim/init.lua
 
 Here is to add iTerm to your nvim settings
 Add the following to your `init.lua` config:
@@ -30,29 +29,29 @@ Switch to it colorsheme gruvbox-material.
 
 ## install plugs for neovim
 
- 1. lazy (package manager)
- 2. catpuccin (color scheme)
- 3. telescope (fuzzy finder)
- 4. treesitter (creates AST abstract syntax tree for highlight)
- 5. nvim neo tree (tree navigation)
+1.  lazy (package manager)
+2.  catpuccin (color scheme)
+3.  telescope (fuzzy finder)
+4.  treesitter (creates AST abstract syntax tree for highlight)
+5.  nvim neo tree (tree navigation)
     - `Neotree filesystem reveal right`
 
- for more plugs check: https://github.com/rockerBOO/awesome-neovim
- 
+for more plugs check: https://github.com/rockerBOO/awesome-neovim
+
 ## Elixir Lsp
 
 ref: https://github.com/elixir-lsp/elixir-ls#building-and-running
 
-First, clone the repor under `~/src/github/` 
+First, clone the repor under `~/src/github/`
 
-    git clone https://github.com/elixir-lsp/elixir-ls.git ~/src/github/
+    git clone https://github.com/elixir-lsp/elixir-ls.git ~/src/github/elixir-lsp/
     cd elixir-ls
     mix deps.get
     MIX_ENV=prod mix compile
     mkdir release
     MIX_ENV=prod mix elixir_ls.release2 -o <release_dir>
 
-    now this is your lsp service directory 
+    now this is your lsp service directory
 
     `~/src/github/elixir-ls/release`
 
