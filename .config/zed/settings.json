@@ -10,6 +10,7 @@
   "project_panel": {
     "dock": "right"
   },
+  "relative_line_numbers": true,
   "vim_mode": true,
   "telemetry": {
     "metrics": false
