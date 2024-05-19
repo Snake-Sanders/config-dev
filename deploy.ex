@@ -10,10 +10,12 @@ defmodule RepoHanlder do
       [@source_dir, @dest_dir]
       |> Enum.map(&Path.expand/1)
       |> Enum.map(&validate_dir_path/1)
-      |> tap(fn paths ->
-        Enum.map(paths, fn p -> IO.puts("using dir: #{p}") end)
-      end)
-
+      # |> tap(fn paths ->
+      #   Enum.map(paths, fn p -> IO.puts("using dir: #{p}") end)
+      # end)
+    IO.puts("Copying files ")
+    IO.puts("From github: #{@source_dir}")
+    IO.puts("To local: #{@dest_dir}")
     copy_files(source_dir, dest_dir)
   end
 
