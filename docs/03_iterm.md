@@ -132,3 +132,20 @@ Just add the plug `web-search` to the pluggins list in `~.zshrc`
 If after these steps you open termianl (/bin/zsh) and the prompt has strange characters, then go to Terminal settings change the font to `JetBrainMonoNL NFM Regular 14`
 
 This is one of the adapted fonts from here https://www.nerdfonts.com/font-downloads
+
+10. Fuzzy Finder
+
+Install `fzf` and `ag`
+
+`berew install fzf`
+`berew install the_silver_searcher`
+
+now configure fzf in `.zshrc`
+
+```bash
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# use silver searcher (ag) plug for find files ignoring .git
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+```
