@@ -43,32 +43,17 @@ option 2:
 
 - under `settings/general/selection` select `Applications in terminal may access clipboard`. This is for copying text in Tmux.
 
-5. Power Level 10k
+5. Starship
 
-Power Level 10k changes the console style. Go to:
+I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
 
-https://github.com/romkatv/powerlevel10k
+https://starship.rs/
 
-Note: The installation with `brew` **does not work**, it can't find the installed package in the path.
+`brew install starship`
 
-I install it directly from source.
+Add the following to the end of ~/.zshrc:
 
-notice how this checks out the repo directly under `Oh my zsh` themes directory:
-
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-- enabled this plug
-- open `~/zshrc` and set
-
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-
-- save the file
-- source the file with `source ~/.zshrc`
-- setup this plug with the wizard that shows up automatically. If this does not start, check out the home page on how use the command to lauch.
-
-If you want to reconfigure the style, just run assistant again:
-
-`p10k configure`
+`eval "$(starship init zsh)"`
 
 6. ZSH syntax highlight
 
@@ -149,3 +134,32 @@ source <(fzf --zsh)
 # use silver searcher (ag) plug for find files ignoring .git
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
+
+# Obsolte plugs
+
+## Power Level 10k
+
+Power Level 10k changes the console style. Go to:
+
+https://github.com/romkatv/powerlevel10k
+
+Note: The installation with `brew` **does not work**, it can't find the installed package in the path.
+
+I install it directly from source.
+
+notice how this checks out the repo directly under `Oh my zsh` themes directory:
+
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+- enabled this plug
+- open `~/zshrc` and set
+
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+
+- save the file
+- source the file with `source ~/.zshrc`
+- setup this plug with the wizard that shows up automatically. If this does not start, check out the home page on how use the command to lauch.
+
+If you want to reconfigure the style, just run assistant again:
+
+`p10k configure`
