@@ -25,6 +25,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
+export EDITOR=nvim
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
@@ -45,8 +47,6 @@ alias la="la -la"
 alias lla="ls -la"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-eval "$(starship init zsh)"
 
 # Syntax higlight has to be the last configuration!
 # If you receive "highlighters directory not found" error message,
