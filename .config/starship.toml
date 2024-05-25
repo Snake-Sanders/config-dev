@@ -6,32 +6,16 @@ palette = "catppuccin_mocha"
 right_format = """$all"""
 command_timeout = 1000
 
-[directory.substitutions]
-'~/tests/starship-custom' = 'work-project'
+[package]
+disabled = true
 
 [git_branch]
-format =  '[$symbol$branch(:$remote_branch)]($style)'
+truncation_length = 28
+format =  '[$symbol $branch ]($style)'
 
-[aws]
-format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
-disabled = false
-style = 'bold blue'
-symbol = " "
-
-[golang]
-format = '[ ](bold cyan)'
-
-[kubernetes]
-symbol = '☸ '
-disabled = false
-detect_files = ['Dockerfile']
-format = '[$symbol$context( \($namespace\))]($style) '
-contexts = [
-  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
-]
-
-[docker_context]
-disabled = true
+[elixir]
+symbol = '🔮 '
+format = "[$symbol ]($style)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

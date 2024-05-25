@@ -7,12 +7,15 @@ https://iterm2.com/
 Here is how to pimp your terminal for macos
 https://www.youtube.com/watch?v=wNQpDWLs4To
 
-1. make shure you have zsh as default
+
+## ZSH
+
+make shure you have zsh as default
 
    > echo $0
    > -zsh
 
-2. color scheme
+## Color scheme
 
 - go to https://iterm2colorschemes.com/
 - search for `Gruvbox Dark`
@@ -21,12 +24,12 @@ https://www.youtube.com/watch?v=wNQpDWLs4To
 - import the theme file
 - make sure the style is selected.
 
-3. Oh My Zsh
+## Oh My Zsh
 
 - go to `https://ohmyz.sh/`
 - install with curl
 
-4. Nerd Fonts
+## Nerd Fonts
 
 - go to `nerdfonts.com`
 - go to downloads and select a font type
@@ -43,7 +46,7 @@ option 2:
 
 - under `settings/general/selection` select `Applications in terminal may access clipboard`. This is for copying text in Tmux.
 
-5. Starship
+## Starship
 
 I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
 
@@ -55,7 +58,9 @@ Add the following to the end of ~/.zshrc:
 
 `eval "$(starship init zsh)"`
 
-6. ZSH syntax highlight
+the config file goes in `~/.config/starship.toml`
+
+## ZSH syntax highlight
 
 https://github.com/zsh-users/zsh-syntax-highlighting
 
@@ -75,7 +80,7 @@ Activate the plugin in ~/.zshrc:
 
 Restart zsh (such as by opening a new instance of your terminal emulator).
 
-7. ZSH Auto suggestions
+## ZSH Auto suggestions
 
 https://github.com/zsh-users/zsh-autosuggestions
 
@@ -93,7 +98,7 @@ Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
 
 Start a new terminal session.
 
-8. ZSH Web-search
+## ZSH Web-search
 
 This plug allows you to search directly from the console.
 
@@ -112,13 +117,13 @@ Just add the plug `web-search` to the pluggins list in `~.zshrc`
   )
 ```
 
-9. fix Terminal font
+## Fix Terminal font
 
 If after these steps you open termianl (/bin/zsh) and the prompt has strange characters, then go to Terminal settings change the font to `JetBrainMonoNL NFM Regular 14`
 
 This is one of the adapted fonts from here https://www.nerdfonts.com/font-downloads
 
-10. Fuzzy Finder
+## Fuzzy Finder
 
 Install `fzf` and `ag`
 
@@ -135,9 +140,12 @@ source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
 
-# Obsolte plugs
+## Appendix
 
-## Power Level 10k
+### Power Level 10k (obsolete)
+
+This plug was nice for a while, but the when one realize the amount of
+variables create in the environments it might not be worth it. Use starship.
 
 Power Level 10k changes the console style. Go to:
 
