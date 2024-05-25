@@ -31,7 +31,7 @@ export EDITOR=nvim
 source <(fzf --zsh)
 
 # use silver searcher (ag) plug for find files
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
