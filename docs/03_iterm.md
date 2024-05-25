@@ -1,4 +1,21 @@
 # iTerm2
+- [iTerm2](#iterm2)
+  - [ZSH](#zsh)
+  - [Color scheme](#color-scheme)
+  - [Oh My Zsh](#oh-my-zsh)
+  - [Nerd Fonts](#nerd-fonts)
+  - [Starship](#starship)
+  - [ZSH Plugins](#zsh-plugins)
+    - [ZSH syntax highlight](#zsh-syntax-highlight)
+    - [ZSH Auto suggestions](#zsh-auto-suggestions)
+    - [ZSH Web-search](#zsh-web-search)
+  - [Fix Terminal font](#fix-terminal-font)
+  - [Fuzzy Finder](#fuzzy-finder)
+    - [FZF](#fzf)
+    - [Silver search](#silver-search)
+  - [Appendix](#appendix)
+    - [Power Level 10k (obsolete)](#power-level-10k-obsolete)
+
 
 The default terminals on MacOS (/bin/zsh) does **not** support true colors, so better to use _iTerm2_ instead
 
@@ -60,7 +77,9 @@ Add the following to the end of ~/.zshrc:
 
 the config file goes in `~/.config/starship.toml`
 
-## ZSH syntax highlight
+## ZSH Plugins
+
+### ZSH syntax highlight
 
 https://github.com/zsh-users/zsh-syntax-highlighting
 
@@ -80,7 +99,7 @@ Activate the plugin in ~/.zshrc:
 
 Restart zsh (such as by opening a new instance of your terminal emulator).
 
-## ZSH Auto suggestions
+### ZSH Auto suggestions
 
 https://github.com/zsh-users/zsh-autosuggestions
 
@@ -98,7 +117,7 @@ Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
 
 Start a new terminal session.
 
-## ZSH Web-search
+### ZSH Web-search
 
 This plug allows you to search directly from the console.
 
@@ -125,17 +144,28 @@ This is one of the adapted fonts from here https://www.nerdfonts.com/font-downlo
 
 ## Fuzzy Finder
 
-Install `fzf` and `ag`
+### FZF 
+
+Install `fzf` 
 
 `berew install fzf`
-`berew install the_silver_searcher`
 
 now configure fzf in `.zshrc`
 
 ```bash
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+```
 
+### Silver search
+
+Install `ag`
+
+`berew install the_silver_searcher`
+
+now configure `ag` in `.zshrc`
+
+```bash
 # use silver searcher (ag) plug for find files ignoring .git
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
