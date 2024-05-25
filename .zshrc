@@ -48,6 +48,8 @@ alias lla="ls -la"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+eval "$(starship init zsh)"
+
 # Syntax higlight has to be the last configuration!
 # If you receive "highlighters directory not found" error message,
 # you may need to add the following to your .zshenv:
