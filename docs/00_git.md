@@ -35,6 +35,13 @@ To validate the configuration, close vscode, go to the project folder
 
 ## Configure gitlab/github keys
 
+create a key with 
+
+`ssh-keygen -t rsa"`
+
+do not add passphrase otherwise you will need to type for every 
+git commit or git pull.
+
 If you have different users for github and gitlab then you 
 need to specify which key to use on each one.
 
