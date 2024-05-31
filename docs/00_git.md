@@ -32,3 +32,46 @@ To validate the configuration, close vscode, go to the project folder
 
 - Check user name `git config user.name`
 - Check user email `git config user.email`
+
+## Configure gitlab/github keys
+
+If you have different users for github and gitlab then you 
+need to specify which key to use on each one.
+
+create `~/.ssh/config`
+
+add:
+
+```
+# GitLab configuration
+Host gitlab.com
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/your_gitlab_key
+
+# GitHub configuration
+Host github.com
+    AddKeysToAgent yes
+    UseKeychain no
+    IdentityFile ~/.ssh/your_github
+
+
+# Default configuration for other hosts
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa    
+```
+
+ensure the access right
+
+```
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/your_gitlab_key
+chmod 600 ~/.ssh/your_github_key
+```
+
+test the connection 
+
+`ssh -T git@gitlab.com`
+
