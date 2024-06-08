@@ -62,3 +62,11 @@ First, clone the repor under `~/src/github/`
 start `nvim` and type `:help` to beging the introduction
 
 if the help page show a treesitter highlight error while scrolling the page, then install the highliter for this file `:TSUpdate vimdoc`
+
+## Troubleshooting
+
+Try to run Health check
+
+`:checkheath`
+
+if there are still conflicts with packer then delete the folder `~/.local/shared/nvim/xx/plug`
