@@ -15,6 +15,7 @@ If you set in the config a defined tab lenght, example:
 then you can force replacing tabs for spaces with the command:
 
 `:retab`
+
 ### Neo Tree
 
 - `a`: to add a file or directory, directory ends with `/`
@@ -44,6 +45,10 @@ will select the content `[ "apple", "orange", "pear"]`
 
 anywhere on the word type `viw` will sellect the whole word.
 Also works with `viW`
+
+## Navigation
+
+`%` on top of `{`, `(`, `)`, `}` and will jump to the matchin pair.
 
 ## Diagnostics
 
