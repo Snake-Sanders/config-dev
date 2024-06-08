@@ -2,10 +2,19 @@
 
 ## File management
 
-- `%`: creates new file 
-- `d`: creates new directory 
+- `%`: creates new file
+- `d`: creates new directory
 - `:Ex`: opens file explorer
 
+## Format
+
+If you set in the config a defined tab lenght, example:
+
+`set tabstop=2`
+
+then you can force replacing tabs for spaces with the command:
+
+`:retab`
 ### Neo Tree
 
 - `a`: to add a file or directory, directory ends with `/`
@@ -14,9 +23,9 @@
 
 - select text + `=`: formats text
 
-### Select block within symbols 
+### Select block within symbols
 
-Example: 
+Example:
 
     fruit_names = [ "apple", "orange", "pear"]
 
