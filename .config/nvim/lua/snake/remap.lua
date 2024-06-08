@@ -12,17 +12,26 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
--- ctr + p = search files
---vim.keymap.set('n', '<C-p>', builtin.find_files, {})
--- space + f + g = find in files with grep 
---vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
--- space + p + v = previous view
---vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
--- space + p + f = path find (all the files)
---vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
--- space + p + g = path find only files in git repo
---vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
--- space + p + s = project search
---vim.keymap.set('n', '<leader>ps', function()
- -- builtin.grep_string({search = vim.fn.input("Grep >")})
---end)
+-- move selected lines up (shift K) down (shift J)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+
+-- when joining lines with Shift J the cursor remains in its place
+vim.keymap.set("n", "J", "mzJ`z")
+-- keeps cursor static when paginating
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- keeps cursor static when searching
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- keeps copy buffer after paste
+vim.keymap.set("x", "<leader>p", "\"_dP")
+-- copy to clipboard to be pasted outside neovim
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- avoid replay last recorded macro
+vim.keymap.set("n", "Q", "<nop>")
