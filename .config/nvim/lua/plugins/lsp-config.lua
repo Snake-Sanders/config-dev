@@ -33,7 +33,7 @@ return {
           },
         },
       })
-      
+
       -- `on_attach` callback will be called after a language server
       -- instance has been attached to an open buffer with matching filetype
       -- here we're setting key mappings for hover documentation, goto definitions, goto references, etc
