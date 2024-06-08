@@ -169,6 +169,14 @@ now configure `ag` in `.zshrc`
 # use silver searcher (ag) plug for find files ignoring .git
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
+### FD
+
+Alternative version for `find`
+It is required by `Telescope` nvim plug.
+
+https://github.com/sharkdp/fd
+
+`brew install fd`
 
 ### RipGrep
 
