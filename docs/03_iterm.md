@@ -144,9 +144,9 @@ This is one of the adapted fonts from here https://www.nerdfonts.com/font-downlo
 
 ## Fuzzy Finder
 
-### FZF 
+### FZF
 
-Install `fzf` 
+Install `fzf`
 
 `berew install fzf`
 
@@ -170,6 +170,14 @@ now configure `ag` in `.zshrc`
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
 
+### RipGrep
+
+another replacement for grep, this is needed for nvim grep function
+`<leader> + ps` which uses ripgrep underneath.
+
+```bash
+brew install ripgrep
+```
 ## Appendix
 
 ### Power Level 10k (obsolete)
