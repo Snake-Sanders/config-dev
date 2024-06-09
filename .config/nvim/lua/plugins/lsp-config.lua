@@ -22,7 +22,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      
+
       -- setup for rust
       lspconfig.rust_analyzer.setup {
         -- Server-specific settings. See `:help lspconfig-setup`
@@ -34,9 +34,11 @@ return {
       lspconfig.lua_ls.setup({
         settings = {
           Lua = {
-            diagnostics = {
-              globals = { "vim" },
+            completion = {
+              callSnippet = 'Replace',
             },
+            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+            diagnostics = { disable = { 'missing-fields' } },
           },
         },
       })
