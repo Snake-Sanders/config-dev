@@ -22,7 +22,14 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-
+      
+      -- setup for rust
+      lspconfig.rust_analyzer.setup {
+        -- Server-specific settings. See `:help lspconfig-setup`
+        settings = {
+          ['rust-analyzer'] = {},
+        },
+      }
       -- setup for Lua
       lspconfig.lua_ls.setup({
         settings = {
