@@ -54,3 +54,5 @@ Also works with `viW`
 
 `:LspInto` to see if the LSP is running, in case syntax highlight is broken.
 `:Mason` to check the plug installation for syntax, autocomplete, parser, highlight.
+
+`:nmap` to see all the key remapping.
