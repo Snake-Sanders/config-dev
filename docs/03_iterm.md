@@ -41,6 +41,10 @@ make shure you have zsh as default
 - import the theme file
 - make sure the style is selected.
 
+- Avoid dimming panes
+1. got to settings/apparence/dimming
+2. remove `dim inactive split panes`
+
 ## Oh My Zsh
 
 - go to `https://ohmyz.sh/`
