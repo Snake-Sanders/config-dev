@@ -13,8 +13,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
--- highlight
-vim.opt.hlsearch = false
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.opt.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- incremental seach highlight
 vim.opt.incsearch = true
