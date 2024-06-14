@@ -1,14 +1,8 @@
 return {
-  "mbbill/undotree",
-  lazy = false,
+	"mbbill/undotree",
+	lazy = false,
 
---  config = function()
---    require("undotree").setup()
---  end,
-
-  keys = {
-    { "<leader>u", "<cmd>UndoTreeToggle<cr>", desc = "UndoTree" },
-  },
+	keys = {
+		{ "<leader>U", "<cmd>UndotreeToggle<cr>", desc = "Toggle [U]ndoTree" },
+	},
 }
-
-
