@@ -46,6 +46,10 @@ will select the content `[ "apple", "orange", "pear"]`
 anywhere on the word type `viw` will sellect the whole word.
 Also works with `viW`
 
+### Search and replace
+
+`%s@search@replace@gc`
+
 ## Navigation
 
 `%` on top of `{`, `(`, `)`, `}` and will jump to the matchin pair.
