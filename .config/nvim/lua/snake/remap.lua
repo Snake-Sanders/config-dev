@@ -14,8 +14,7 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 -- move selected lines up (shift K) down (shift J)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move lines down" })
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv", { desc = "move lines up" })
-
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move lines up" })
 -- when joining lines with Shift J the cursor remains in its place
 vim.keymap.set("n", "J", "mzJ`z")
 -- keeps cursor static when paginating
