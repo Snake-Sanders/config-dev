@@ -45,6 +45,8 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 alias ll="ls -l"
 alias la="la -la"
 alias lla="ls -la"
+alias cpr="~/src/weavs.io/cm-processor/"
+alias cbe="~/src/weavs.io/cm-backend/"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
