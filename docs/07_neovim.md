@@ -49,13 +49,21 @@ First, clone the repor under `~/src/github/`
     mix deps.get
     MIX_ENV=prod mix compile
     mkdir release
-    MIX_ENV=prod mix elixir_ls.release2 -o <release_dir>
+    MIX_ENV=prod mix elixir_ls.release2 -o release
 
-    now this is your lsp service directory
+the last param `release` is just a relative directory, it can be changed.
+
+now this is your lsp service directory
 
     `~/src/github/elixir-ls/release`
 
-    then, configure the nvim plug `lsp-config.lua`
+then, configure the nvim plug `lsp-config.lua`
+
+	-- setup for Elixir
+	elixirls = {
+		cmd = { "/Users/<YOUR_USER>/src/github/elixir-ls/release/language_server.sh" },
+		capabilities = capabilities,
+	},
 
 ## Tutorial
 
