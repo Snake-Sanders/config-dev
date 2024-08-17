@@ -149,6 +149,27 @@ return { -- LSP Configuration & Plugins
 			elixirls = {
 				cmd = { "/Users/mac/src/github/elixir-ls/release/language_server.sh" },
 				capabilities = capabilities,
+				settings = {
+					elixirLS = {
+						dialyzerEnabled = false,
+						fetchDeps = false,
+					},
+				},
+				on_attach = function(client, bufnr)
+					-- Disable LSP formatting for heex files
+					if vim.bo[bufnr].filetype == "heex" then
+						client.server_capabilities.documentFormattingProvider = false
+					end
+
+					if client.server_capabilities.documentFormattingProvider then
+						vim.cmd([[
+        augroup LspFormatting
+          autocmd! * <buffer>
+          autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+        augroup END
+      ]])
+					end
+				end,
 			},
 
 			-- setup for rust
