@@ -1,9 +1,12 @@
 # Elixir
 
-brew install asdf
+## requirements 
+make sure you have installed `asdf` and `erlang`
+erlang should be installed as asdf plugin!
 
-asdf pluging add erlang
-asdf pluging add elixir
+## add the elixir asdf plugin
+
+`asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`
 
 now you can list the versions to choose 
 the one you want to install:
