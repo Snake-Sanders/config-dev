@@ -29,11 +29,14 @@ Switch to it colorsheme gruvbox-material.
 
 ## install plugs for neovim
 
-1.  lazy (package manager)
-2.  catpuccin (color scheme)
-3.  telescope (fuzzy finder)
-4.  treesitter (creates AST abstract syntax tree for highlight)
-5.  nvim neo tree (tree navigation)
+1.  `lazy`: (package manager)
+2.  `catpuccin`: (color scheme)
+3.  `telescope`: (fuzzy finder)
+4.  `treesitter`: (creates AST abstract syntax tree for syntax highlight)
+5.  `lsp-config`: plug to configure the LSP services
+6.  `mason`: automatically install the plugs configured in lsp-config
+7.  `conform`: autoformats the code, here is set format on save
+8.  `neotree`: neo tree (tree navigation)
     - `Neotree filesystem reveal right`
 
 for more plugs check: https://github.com/rockerBOO/awesome-neovim
