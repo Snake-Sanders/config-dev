@@ -30,6 +30,7 @@ return { -- Autocompletion
 		-- Adds other completion capabilities.
 		--  nvim-cmp does not ship with all sources by default. They are split
 		--  into multiple repos for maintenance purposes.
+		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
 	},
@@ -40,9 +41,16 @@ return { -- Autocompletion
 		luasnip.config.setup({})
 
 		cmp.setup({
+			sources = {
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "luasnip" },
+				{ name = "path" },
+			},
 			snippet = {
 				expand = function(args)
-					luasnip.lsp_expand(args.body)
+					-- luasnip.lsp_expand(args.body)
+					vim.snippet.expand(args.body)
 				end,
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
@@ -99,11 +107,6 @@ return { -- Autocompletion
 				-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 				--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
 			}),
-			sources = {
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-				{ name = "path" },
-			},
 		})
 	end,
 }

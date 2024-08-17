@@ -157,6 +157,16 @@ return { -- LSP Configuration & Plugins
 					["rust-analyzer"] = {},
 				},
 			},
+
+			tailwindcss = {
+				init_options = {
+					userLanguages = {
+						elixir = "html-eex",
+						eelixir = "html-eex",
+						heex = "html-eex",
+					},
+				},
+			},
 		}
 
 		-- Ensure the servers and tools above are installed
