@@ -14,9 +14,9 @@ return { -- Autoformat
   opts = {
     default_format_opts = {
       timeout_ms = 3000,
-      async = false,               -- not recommended to change
-      quiet = false,               -- not recommended to change
-      lsp_format = "fallback",     -- not recommended to change
+      async = false,           -- not recommended to change
+      quiet = false,           -- not recommended to change
+      lsp_format = "fallback", -- not recommended to change
       notify_on_error = false,
       notify_no_formatters = true,
       log_level = vim.log.levels.DEBUG,
@@ -40,6 +40,7 @@ return { -- Autoformat
   -- Setup function that runs after the plugin is loaded
   config = function()
     -- Ensure .heex files are formatted with mix on save
+    -- and avoid using LSP formatter with lsp_fallback = false
     vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = "*",
       callback = function()
