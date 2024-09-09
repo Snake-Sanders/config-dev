@@ -581,6 +581,15 @@ require('lazy').setup({
           tiletypes = { 'elixir', 'eelixir', 'heex' },
           capabilities = capabilities,
         },
+
+        -- typescript
+        ts_ls = {
+          filetypes = {
+            'javascript',
+            'typescript',
+            'vue',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -602,6 +611,7 @@ require('lazy').setup({
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
+            -- here is a patch for nvim v10 that tsserver changed the name.
             if server_name == 'tsserver' then
               server_name = 'ts_ls'
             end
