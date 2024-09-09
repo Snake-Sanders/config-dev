@@ -5,5 +5,12 @@
       "cmd-r": "workspace::ToggleLeftDock",
       "cmd-b": "workspace::ToggleRightDock"
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
   }
 ]
