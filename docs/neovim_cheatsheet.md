@@ -58,5 +58,17 @@ Also works with `viW`
 
 `:LspInto` to see if the LSP is running, in case syntax highlight is broken.
 `:Mason` to check the plug installation for syntax, autocomplete, parser, highlight.
-
 `:nmap` to see all the key remapping.
+
+## Comment code
+
+`g c` and then move the cursor to select lines to be commented out
+
+## Code actions
+
+`<leader> + c + a` opens code action
+
+## Code symbols
+
+
+`<leader> + c + s` opens code symbols, a tree of functions and variables
