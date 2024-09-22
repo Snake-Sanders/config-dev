@@ -21,13 +21,25 @@ otherwise install it with
 
 follow the installation in `https://clangd.llvm.org/installation`
 
-
 add `clangd` to the `lspconfig`
 
+** Attention**: 
+Use only the installation of `clangd` from the system not the neovim pluging.
+If we don't indicate where `clangd` is installed in the system, neovim
+with automatically pull the `clangd` module from the repo. 
+This will create a conflict with the local installation failing to locate the 
+standar library. (e.g.: it will complain about the includes and `cout`, `cin`, 
+`endl`, etc.
+
+so instead of using the default configuration `cmd = { 'clangd', ...`
+we specify the version from the system `cmd = { '/usr/bin/clangd',...` 
+to see where is the system installation, just type `which clangd`
+
+:!clangd --version
 ```lua
 -- cpp
 clangd = {
-   cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
+   cmd = { '/usr/bin/clangd', '--background-index', '--clang-tidy', '--log=verbose' },
    init_options = {
      fallback_flags = { '-std=c++17' },
    },
