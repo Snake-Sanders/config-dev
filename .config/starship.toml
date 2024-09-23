@@ -10,7 +10,10 @@ command_timeout = 1000
 disabled = true
 
 [c]
-format = 'via [$name $version]($style)'
+format = '[$name $version]($style)'
+
+[cmake]
+format = '[$name $version]($style)'
 
 [git_branch]
 truncation_length = 28
