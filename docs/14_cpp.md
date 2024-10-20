@@ -96,3 +96,12 @@ make
 
 Then you can run it by calling `./app`
 
+## Version
+
+For Exercism it is needed Cpp+17, you can add `.clangd` 
+file in your root dir:
+
+```cpp
+CompileFlags:
+    Add: [-std=c++17]
+```
