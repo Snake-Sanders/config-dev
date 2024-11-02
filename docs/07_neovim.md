@@ -81,3 +81,44 @@ Try to run Health check
 `:checkheath`
 
 if there are still conflicts with packer then delete the folder `~/.local/shared/nvim/xx/plug`
+
+## Install Neovim on Linux Mint
+
+Linux Mint is always behind, the version available on `apt-get` is neovim 0.6 
+but the current is 0.10. To install manually do:
+
+- Chose a version from the stable releases
+
+https://github.com/neovim/neovim/releases/tag/stable
+
+- Install wget:
+
+    sudo apt install wget 
+
+- Download the package
+
+    wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+    chmod u+x nvim.appimage
+
+- Extract the AppImage Contents 
+
+This will create a folder called squashfs-root with all of Neovim's files inside.
+
+    ./nvim.appimage --appimage-extract
+
+- Move the Entire Directory. 
+
+Move the entire squashfs-root directory to a location like /opt/nvim, which is 
+commonly used for software installations outside the default system paths.
+
+    sudo mv squashfs-root /opt/nvim
+
+- Create a Symlink for the nvim Binary
+
+    sudo ln -s /opt/nvim/usr/bin/nvim /usr/local/bin/nvim
+
+- Verify the installation 
+
+    nvim --version
+    nvim testfile.txt
+
