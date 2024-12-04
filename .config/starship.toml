@@ -26,6 +26,9 @@ format = "[$symbol ]($style)"
 [nodejs]
 disabled = true 
 
+[docker_context]
+disabled = true 
+
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
